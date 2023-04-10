@@ -1,4 +1,5 @@
 // DRY ---> Do Not Repeat Yourself
+
 document.getElementById("btn-deposit").addEventListener("click", function () {
   /* 
     1. get the element by id
@@ -10,16 +11,18 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
     1. get previous deposit total by id
 
     */
-  const previousDepositTotal = getTextElementValueById("deposit-total");
+  const previousDepositTotal = getextElementValueById("deposit-total");
 
   // calculate new deposit total
   const newDepositTotal = previousDepositTotal + newDepositAmount;
-  console.log(newDepositTotal, previousDepositTotal, newDepositAmount);
+
   // set deposit total value
-  setTextElementValueById("deposit-total", newDepositTotal);
+  const result = setTextElementValueById("deposit-total", newDepositTotal);
+  console.log(result);
 
   // get previous balance by using the function
   const previousBalanceTotal = getextElementValueById("balance-total");
   const newBalanceTotal = previousBalanceTotal + newDepositAmount;
   setTextElementValueById("balance-total", newBalanceTotal);
+}
 );
